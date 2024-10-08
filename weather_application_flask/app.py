@@ -5,7 +5,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # OpenWeatherMap API key, replace it with yours
-API_KEY = '2d1c7caa26f759a3016bb7026d1fa565'  
+API_KEY = 'XXXXXXAAAAAAAAAAAAXXXXXXXXXX'  
 
 # function to get current weather
 def get_weather(city):
@@ -16,7 +16,7 @@ def get_weather(city):
         response.raise_for_status()
         data = response.json()                  # convert response to JSON
 
-        main = data['main']
+        main = data['main']                     # fetching weather data
         wind = data['wind']
         weather_desc = data['weather'][0]['description']
         timezone_offset = data['timezone']
