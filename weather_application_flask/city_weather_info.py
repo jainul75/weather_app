@@ -2,7 +2,7 @@ import requests  # for sending HTTP requests
 from datetime import datetime, timedelta
 
 # OpenWeatherMap API key 
-API_KEY = '2d1c7caa26f759a3016bb7026d1fa565'  
+API_KEY = 'XXXXXXXXXXXXXXXXXXXXXXX6XXX5'  # replace it with yours
 
 # create a function to get the current weather
 def get_weather(city):
@@ -32,7 +32,7 @@ def get_weather(city):
         )
         return weather_info 
 
-    except requests.exceptions.HTTPError as http_err:
+    except requests.exceptions.HTTPError as http_err:        # error handling 
         if response.status_code == 401:
             return "Error: Invalid API key! Please check your API key."
         elif response.status_code == 404:
